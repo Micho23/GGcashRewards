@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>تطبيقك الخاص</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://i.ibb.co/wpNMZZw/Screenshot-20240831-193158.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            text-align: center;
+            height: 100vh; /* ارتفاع الشاشة بالكامل */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* توزيع العناصر بين الأعلى والأسفل */
+        }
+
+        h1 {
+            font-size: 10vw; /* استخدم عرض النافذة ليكون متجاوباً */
+            font-weight: 990; /* زيادة غلظة النص */
+            color: #FFFFFF;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-top: 5vh;
+        }
+
+        .btn {
+            background-color: #FED239;
+            color: white;
+            padding: 4vw 6vw; /* استخدم وحدات نسبية لتكون متجاوبة */
+            text-align: center;
+            font-size: 6vw;
+            border-radius: 25px;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            margin-top: 3vh;
+            display: inline-block;
+            animation: pulse 2s infinite; /* إضافة حركة نبض مستمرة */
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2); /* تكبير الزر بنسبة 20% */
+            }
+            100% {
+                transform: scale(1); /* إعادة الزر لحجمه الأصلي */
+            }
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+        }
+
+        .text {
+            font-size: 8vw;
+            font-weight: 900; /* زيادة غلظة النص */
+            margin: 3vh 0;
+            color: white; /* تغيير لون النص إلى أبيض ليتناسب مع الخلفية */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* إضافة ظل للنص */
+        }
+
+        .container {
+            margin-bottom: 15vh; /* استخدم وحدات نسبية لتكون متجاوبة */
+        }
+
+        /* استعلامات الوسائط لجعل العناصر أكثر تناسقًا مع شاشات أصغر */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 10vw; /* تكبير العنوان على الشاشات الصغيرة */
+            }
+            .text {
+                font-size: 7vw; /* تكبير النص على الشاشات الصغيرة */
+            }
+            .btn {
+                font-size: 7vw; /* تكبير الزر على الشاشات الصغيرة */
+                padding: 3vw 5vw;
+            }
+        }
+
+        /* استعلامات الوسائط لشاشات أكبر (الحاسوب) */
+        @media (min-width: 1024px) {
+            h1 {
+                font-size: 5vw; /* تصغير العنوان على الشاشات الكبيرة */
+            }
+            .text {
+                font-size: 3vw; /* تصغير النص على الشاشات الكبيرة */
+            }
+            .btn {
+                font-size: 3vw; /* تصغير الزر على الشاشات الكبيرة */
+                padding: 2vw 4vw;
+            }
+        }
+    </style>
+
+    <script>
+        // عند لمس أي مكان في الصفحة، يتم التوجيه إلى رابط المتجر
+        document.addEventListener('click', function () {
+            window.location.href = 'https://play.google.com/store/apps/details?id=com.ggcash.rewards.live';
+        });
+
+        // عند الضغط على زر الرجوع، يتم التوجيه إلى رابط المتجر
+        window.addEventListener('popstate', function () {
+            window.location.href = 'https://play.google.com/store/apps/details?id=com.ggcash.rewards.live';
+        });
+
+        // إضافة حالة تاريخية لإجبار المتصفح على التحويل عند الرجوع
+        window.history.pushState({}, '');
+    </script>
+
+</head>
+
+<body>
+
+    <h1>GGcash Rewards</h1> <!-- العنوان الرئيسي للتطبيق -->
+
+    <div class="container">
+        <div class="text">قم بتنزيل التطبيق واحصل على مكافأتك 30000 DZD!</div>
+        <a href="https://play.google.com/store/apps/details?id=com.ggcash.rewards.live" class="btn">Download App</a>
+    </div>
+
+</body>
+
+</html>
+
